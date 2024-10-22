@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rezultat Predikcije</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/logo1.png" alt="Logo 1" class="logo">
+        <img src="/static/images/logo2.png" alt="Logo 2" class="logo">
+    </header>
+    <h1>Rezultat Predikcije</h1>
+    <div class="image-container">
+        <img src="data:image/png;base64,{{ image_data }}" alt="Uploaded Image" width="300">
+    </div>
+    <p class="prediction">Top 5 Predikcija:</p>
+    <ul>
+        {% for label, prob in predictions %}
+            <li>{{ label }} - {{ '%.2f' | format(prob * 100) }}%</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Natrag</a>
+</body>
+</html>

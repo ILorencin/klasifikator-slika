@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Klasifikacija Slika</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Dodajte naslov ovdje -->
+    <h1 class="main-title">Dobrodošli na Klasifikator provided by Ant Intelligence</h1>
+    
+    <header>
+        <img src="/static/images/logo1.png" alt="Logo 1" class="logo">
+        <img src="/static/images/logo2.png" alt="Logo 2" class="logo">
+    </header>
+    <div class="form-container">
+        <h2>Uploadajte sliku za klasifikaciju</h2>
+        <form action="/predict" enctype="multipart/form-data" method="post">
+            <input name="file" type="file" accept="image/*">
+            <br>
+            <input type="submit" value="Predvidi">
+        </form>
+    </div>
+</body>
+</html>
